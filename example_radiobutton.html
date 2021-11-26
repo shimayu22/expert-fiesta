@@ -13,27 +13,27 @@
         <div class="container mx-auto mt-20">
             <div class="text-center">
                 <input type="radio" v-model='team' id="swallows" value="東京ヤクルトスワローズ" :class="inputClass" />
-                <label for="swallows" :class="labelClass" class="peer-checked:bg-yellow-200"><div class="text-3xl">東京ヤクルトスワローズ</div></label>
+                <label for="swallows" :class="labelClass"><div class="text-3xl">東京ヤクルトスワローズ</div></label>
             </div>
             <div class="text-center">
                 <input type="radio" v-model='team' id="tigers" value="阪神タイガース" :class="inputClass" />
-                <label for="tigers" :class="labelClass" class="peer-checked:bg-yellow-200"><div class="text-3xl">阪神タイガース</div></label>
+                <label for="tigers" :class="labelClass"><div class="text-3xl">阪神タイガース</div></label>
             </div>
             <div class="text-center">
                 <input type="radio" v-model='team' id="giants" value="読売ジャイアンツ" :class="inputClass" />
-                <label for="giants" :class="labelClass" class="peer-checked:bg-yellow-200"><div class="text-3xl">読売ジャイアンツ</div></label>
+                <label for="giants" :class="labelClass"><div class="text-3xl">読売ジャイアンツ</div></label>
             </div>
             <div class="text-center">
                 <input type="radio" v-model='team' id="carp" value="広島東洋カープ" :class="inputClass" />
-                <label for="carp" :class="labelClass" class="peer-checked:bg-yellow-200"><div class="text-3xl">広島東洋カープ</div></label>
+                <label for="carp" :class="labelClass"><div class="text-3xl">広島東洋カープ</div></label>
             </div>
             <div class="text-center">
                 <input type="radio" v-model='team' id="dragons" value="中日ドラゴンズ" :class="inputClass" />
-                <label for="dragons" :class="labelClass" class="peer-checked:bg-yellow-200"><div class="text-3xl">中日ドラゴンズ</div></label>
+                <label for="dragons" :class="labelClass"><div class="text-3xl">中日ドラゴンズ</div></label>
             </div>
             <div class="text-center">
                 <input type="radio" v-model='team' id="baystars" value="横浜DeNAベイスターズ" :class="inputClass" />
-                <label for="baystars" :class="labelClass" class="peer-checked:bg-yellow-200"><div class="text-3xl">横浜DeNAベイスターズ</div></label>
+                <label for="baystars" :class="labelClass"><div class="text-3xl">横浜DeNAベイスターズ</div></label>
             </div>
                 <p class="text-center text-3xl mt-10">{{ team }}</p>
             </div>
@@ -46,7 +46,7 @@
             return {
                 team: 'チームを選択してください',
                 inputClass: ['hidden peer'],
-                labelClass: ['flex flex-col w-full max-w-lg mx-auto border-2 rounded-2xl border-gray-900 p-2 my-4 hover:bg-yellow-200']
+                labelClass: ['flex flex-col w-full max-w-lg mx-auto border-2 rounded-2xl border-gray-900 p-2 my-4 hover:bg-yellow-200 peer-checked:bg-green-200']
             }
         }
     }

@@ -10,32 +10,47 @@
 
 <body>
     <div id="app">
-        <div class="container mx-auto mt-20">
-            <div class="text-center">
-                <input type="radio" v-model='team' id="swallows" value="東京ヤクルトスワローズ" :class="inputClass" />
-                <label for="swallows" :class="labelClass"><div class="text-3xl">東京ヤクルトスワローズ</div></label>
-            </div>
-            <div class="text-center">
-                <input type="radio" v-model='team' id="tigers" value="阪神タイガース" :class="inputClass" />
-                <label for="tigers" :class="labelClass"><div class="text-3xl">阪神タイガース</div></label>
-            </div>
-            <div class="text-center">
-                <input type="radio" v-model='team' id="giants" value="読売ジャイアンツ" :class="inputClass" />
-                <label for="giants" :class="labelClass"><div class="text-3xl">読売ジャイアンツ</div></label>
-            </div>
-            <div class="text-center">
-                <input type="radio" v-model='team' id="carp" value="広島東洋カープ" :class="inputClass" />
-                <label for="carp" :class="labelClass"><div class="text-3xl">広島東洋カープ</div></label>
-            </div>
-            <div class="text-center">
-                <input type="radio" v-model='team' id="dragons" value="中日ドラゴンズ" :class="inputClass" />
-                <label for="dragons" :class="labelClass"><div class="text-3xl">中日ドラゴンズ</div></label>
-            </div>
-            <div class="text-center">
-                <input type="radio" v-model='team' id="baystars" value="横浜DeNAベイスターズ" :class="inputClass" />
-                <label for="baystars" :class="labelClass"><div class="text-3xl">横浜DeNAベイスターズ</div></label>
-            </div>
-                <p class="text-center text-3xl mt-10">{{ team }}</p>
+        <div class="text-center">
+            <div class="container mx-auto mt-20">
+                <div>
+                    <input type="radio" v-model='team' id="swallows" value="東京ヤクルトスワローズ" :class="inputClass" />
+                    <label for="swallows" :class="labelClass">
+                        東京ヤクルトスワローズ
+                    </label>
+                </div>
+                <div>
+                    <input type="radio" v-model='team' id="tigers" value="阪神タイガース" :class="inputClass" />
+                    <label for="tigers" :class="labelClass">
+                        阪神タイガース
+                    </label>
+                </div>
+                <div>
+                    <input type="radio" v-model='team' id="giants" value="読売ジャイアンツ" :class="inputClass" />
+                    <label for="giants" :class="labelClass">
+                        読売ジャイアンツ
+                    </label>
+                </div>
+                <div>
+                    <input type="radio" v-model='team' id="carp" value="広島東洋カープ" :class="inputClass" />
+                    <label for="carp" :class="labelClass">
+                        広島東洋カープ
+                    </label>
+                </div>
+                <div>
+                    <input type="radio" v-model='team' id="dragons" value="中日ドラゴンズ" :class="inputClass" />
+                    <label for="dragons" :class="labelClass">
+                        中日ドラゴンズ
+                    </label>
+                </div>
+                <div>
+                    <input type="radio" v-model='team' id="baystars" value="横浜DeNAベイスターズ" :class="inputClass" />
+                    <label for="baystars" :class="labelClass">
+                        横浜DeNAベイスターズ
+                    </label>
+                </div>
+                <div>
+                    <p class="text-center text-3xl mt-10">{{ team }}</p>
+                </div>
             </div>
         </div>
     </div>
@@ -46,7 +61,7 @@
             return {
                 team: 'チームを選択してください',
                 inputClass: ['hidden peer'],
-                labelClass: ['flex flex-col w-full max-w-lg mx-auto border-2 rounded-2xl border-gray-900 p-2 my-4 hover:bg-yellow-200 peer-checked:bg-green-200']
+                labelClass: ['flex flex-col w-full max-w-lg mx-auto border-2 rounded-2xl border-gray-900 p-2 my-4 text-3xl hover:bg-yellow-200 peer-checked:bg-green-200']
             }
         }
     }

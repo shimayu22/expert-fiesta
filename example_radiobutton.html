@@ -1,12 +1,51 @@
 <!doctype html>
 <html>
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
-  <!-- ... -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://unpkg.com/vue@next"></script>
 </head>
+
 <body>
-  <!-- ... -->
+    <div id="app">
+        <div class="container mx-auto">
+            <div class="text-center">
+                <h2 class="text-xl mb-3">チームを選択してください</h2>
+                <input type="radio" v-model='team' name="central" id="swallows" value="東京ヤクルトスワローズ"
+                    class="hidden"><label for="swallows"
+                    class="flex flex-col w-full max-w-lg mx-auto border-2 rounded-2xl border-gray-900 p-2 my-4 hover:bg-yellow-200">東京ヤクルトスワローズ</label>
+                <input type="radio" v-model='team' name="central" id="giants" value="阪神タイガース" class="hidden"><label
+                    for="giants"
+                    class="flex flex-col w-full max-w-lg mx-auto border-2 rounded-2xl border-gray-900 p-2 my-4 hover:bg-yellow-200">阪神タイガース</label>
+                <input type="radio" v-model='team' name="central" id="tigers" value="読売ジャイアンツ" class="hidden"><label
+                    for="tigers"
+                    class="flex flex-col w-full max-w-lg mx-auto border-2 rounded-2xl border-gray-900 p-2 my-4 hover:bg-yellow-200">読売ジャイアンツ</label>
+                <input type="radio" v-model='team' name="central" id="carp" value="広島東洋カープ" class="hidden"><label
+                    for="carp"
+                    class="flex flex-col w-full max-w-lg mx-auto border-2 rounded-2xl border-gray-900 p-2 my-4 hover:bg-yellow-200">広島東洋カープ</label>
+                <input type="radio" v-model='team' name="central" id="dragons" value="中日ドラゴンズ" class="hidden"><label
+                    for="dragons"
+                    class="flex flex-col w-full max-w-lg mx-auto border-2 rounded-2xl border-gray-900 p-2 my-4 hover:bg-yellow-200">中日ドラゴンズ</label>
+                <input type="radio" v-model='team' name="central" id="baystars" value="横浜DeNAベイスターズ"
+                    class="hidden"><label for="baystars"
+                    class="flex flex-col w-full max-w-lg mx-auto border-2 rounded-2xl border-gray-900 p-2 my-4 hover:bg-yellow-200">横浜DeNAベイスターズ</label>
+
+                <p>{{ team }}</p>
+            </div>
+        </div>
+    </div>
 </body>
+<script>
+    const SelectedTeam = {
+        data() {
+            return {
+                team: 'チームを選択してください'
+            }
+        }
+    }
+    Vue.createApp(SelectedTeam).mount('#app')
+</script>
+
 </html>
